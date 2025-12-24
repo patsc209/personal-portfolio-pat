@@ -1,5 +1,5 @@
 body {
-    background-color: #2b3e6e;
+    background-color: #1d3060;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -8,12 +8,12 @@ body {
 
 /* Header style */
 header {
-    background-color: #2b3e6e; 
+    background-color: #1d3060; 
     padding: 0; 
     margin: 0;
     text-align: center;
-    font-family: 'Cantarell', sans-serif;
-    font-weight: 400;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
     font-style: normal;
     color: #fffbf4; 
     width: 100%;
@@ -64,52 +64,291 @@ header {
 .hero {
     margin: 0;
     width: 100%;
-    max-height: 90vh;
-    display: flex; 
+    height: 90vh;
+    display: flex;
     position: relative;
+    padding-top: 50px;
+    justify-content: flex-start;
+    background-color: #1d3060;
 }
 
 .hero-content {
-    width: 100%;
+    width: 80%;
+    max-width: 1200px;
     display: flex;
+    position: relative;
     flex-direction: column;
-    align-items: center;
-    padding: 100px 100px;
-    text-align: center;
+    align-items: flex-start;
+    padding: 100px 100px 100px;
+    text-align: left;
     justify-content: center;
-    
-}
-
-.hero-content img {
-    width: 20%;
-    height: 80%;
-    border-radius: 20px;
-    object-fit: cover;
-    object-position: center;
-    margin: 10px;
+    gap: 20px;
 }
 
 .hero-content h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: #fffbf4;
     margin: 0;
-    font-family: "Instrument Serif", serif;
-    font-weight: 300;
+    font-family: "Noto Serif", serif;
+    font-weight: 400;
     position: relative;
-    
-    
 }
 
-.hero-content h2 {
-    font-family: "Instrument Serif", serif;
-    font-weight: 300;
-    font-size: 3.5rem;
-    position: relative;
-    padding-top: 25px;
-    color: #fffbf4;
-    
-    width: 30%;
-    line-height: 1.1;
+.hero-name {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px;
+    margin: 0;
+}
 
-    
+.hero-name-script {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 5.5rem;
+    color: #fffbf4;
+    line-height: 1;
+    margin-left: 100px;
+}
+
+
+.hero-list {
+    margin: 0;
+    padding-left: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: "Noto Serif", serif;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #fffbf4;
+}
+
+.hero-list li {
+    position: relative;
+    padding-left: 14px;
+}
+
+.hero-list li::before {
+    content: "*";
+    position: relative;
+    left: -14px;
+    color: #fffbf4;
+    font-size: 1.2rem;
+    top: -1px;
+}
+
+.hero-list em {
+    font-style: italic;
+}
+
+/* About Section */
+.about {
+    background-color: #f7f1e9;
+    color: #1f2e56;
+    padding: 80px 10vw 80px;
+}
+
+.about-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-text {
+    flex: 1 1 55%;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.about-text p {
+    margin: 0 0 18px;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-title {
+    flex: 1 1 35%;
+    text-align: right;
+}
+
+.about-title h2 {
+    margin: 0;
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-size: 5rem;
+    color: #2b3e6e;
+    line-height: 1;
+}
+
+.about-cta {
+    margin-top: 70px;
+    background-color: #2b3e6e;
+    color: #f7f1e9;
+    text-align: center;
+    padding: 60px 20px 80px;
+    border-radius: 60% 60% 0 0 / 50% 50% 0 0;
+}
+
+.about-cta p {
+    margin: 0;
+    font-family: "Instrument Serif", serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+/* Projects Section */
+.projects {
+    background-color: #1d3060;
+    color: #fffbf4;
+    padding: 90px 10vw 110px;
+}
+
+.projects-header {
+    max-width: 760px;
+    margin-bottom: 50px;
+}
+
+.projects-header h2 {
+    margin: 0 0 12px;
+    font-family: "Instrument Serif", serif;
+    font-size: 3.25rem;
+    font-weight: 400;
+    color: #fffbf4;
+}
+
+.projects-header p {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: auto;
+    padding: 20px;
+}
+
+.project-card {
+    background: #ffffff;
+    border: 1px solid #d7d1c8;
+    border-radius: 12px;
+    padding: 18px 18px 22px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project-img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 10px;
+    background: #e8e2d8;
+    display: grid;
+    place-items: center;
+    color: #586995;
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.project-card h3 {
+    margin: 0;
+    font-family: "Noto Serif", serif;
+    font-size: 1.4rem;
+    color: #1d3060;
+}
+
+.project-card p {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #2b2b2b;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #111c3b;
+    color: #fffbf4;
+    padding: 40px 10vw 30px;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 28px;
+    align-items: flex-start;
+}
+
+.footer-brand h3 {
+    margin: 0 0 8px;
+    font-family: "Noto Serif", serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fffbf4;
+}
+
+.footer-brand p {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links a {
+    color: #fffbf4;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-size: 0.98rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact p {
+    margin: 0 0 6px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.98rem;
+}
+
+.footer-contact a {
+    color: #fffbf4;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 24px;
+    border-top: 1px solid rgba(255, 251, 244, 0.15);
+    padding-top: 14px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    color: #d9dbe3;
 }
